@@ -81,7 +81,7 @@ class Line {
     m_p2 = Point(p2.m_x, p2.m_y);
   }
   void show(FILE *fp=stdout) {
-    fprintf(fp, " Line: %7.2f, %7.2f  -- %7.2f, %7.2f\n",m_p1.m_x, m_p1.m_y, m_p2.m_x, m_p2.m_y);
+    fprintf(fp, " Line: %10.6f, %10.6f  -- %10.6f, %10.6f\n",m_p1.m_x, m_p1.m_y, m_p2.m_x, m_p2.m_y);
   }
 };
 
@@ -167,7 +167,7 @@ int main(int argc, char *argv[]) {
   }
   
   // for(int n=0; n<ptsList.size(); n++) printf("%d : %5.2f, %5.2f\n",n,ptsList[n].m_x, ptsList[n].m_y);
-  printf("thresh=%5.2f, debug=%d\n",thresh, debug);
+  printf("thresh=%10.6f, debug=%d\n",thresh, debug);
   
   std::vector<Line> linesList;
   linesList = RDPRecur(ptsList, linesList, thresh, 0, -1, 0, debug);
